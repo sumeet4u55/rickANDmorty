@@ -4,8 +4,9 @@
   "description": "rick and morty images",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "compile:sass": "node-sass sass/main.scss public/css/main.css -w",
+    "start": "npm run build && node ./build/bundle-back.js",
+    "build": "npm run webpack:front && npm run webpack:back && npm run compile:sass",
+    "compile:sass": "node-sass sass/main.scss public/css/main.css",
     "webpack:front": "webpack --config ./webpack-front.config.js",
     "webpack:back": "webpack --config ./webpack-back.config.js"
   },
