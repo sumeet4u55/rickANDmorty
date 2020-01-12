@@ -1,0 +1,96 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 0.25fr;
+    grid-gap: 10px;
+    color: black;
+    @media only screen and (max-width: 500px){
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.applied_filters {
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+    grid-template-rows: max-content;
+    padding: 10px;
+    @media only screen and (max-width: 500px){
+        grid-column: 1 / -1;
+        grid-template-columns: 1fr;
+    }
+    &_label {
+        @media only screen and (max-width: 500px){
+            padding: 5px;
+        }
+    }
+    &_label_hidden {
+        visibility: hidden;
+    }
+    &_sorting {
+        justify-self: right;
+        @media only screen and (max-width: 500px){
+            grid-column: 1 / -1;
+            justify-self: left;
+            select {
+                width: 100%;
+            }
+        }
+    }
+    &_selected_filters {
+        display: flex;
+        @media only screen and (max-width: 500px){
+            padding: 5px;
+            flex-wrap: wrap;
+        }
+        &_content {
+            width: 100px;
+            background-color:darkgray;
+            padding: 5px;
+            border-radius: 5px;
+            color:white;
+            margin: 5px;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
+
+.filters_close:hover {
+    cursor: pointer;
+}
+
+.filter_nav {
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    @media only screen and (max-width: 500px){
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    > div {
+        padding: 10px;
+    }
+    &_gender, &_species {
+        transition: height 0.5s; 
+    }
+    &_filters {
+        @media only screen and (max-width: 500px){
+            display: flex;
+            justify-content: space-between;
+        }
+        &_add_filter {
+            display: none;
+            @media only screen and (max-width: 500px){
+                background-color: lightgray;
+                cursor: pointer;
+                display: inline;
+                padding: 3px 10px 3px;
+                border-radius: 50%;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+.collapse {
+    display: none;
+}

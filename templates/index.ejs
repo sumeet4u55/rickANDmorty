@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Rick&Morty</title>
+
+        <link rel="stylesheet" type="text/css" href="/css/main.css" media="screen"/>
+    </head>
+    <body>
+        <header>
+            <%- include('partials/header')%>
+        </header>
+
+        <main>
+            <div class="filter_nav">
+                    <div class="filter_nav_filters">
+                        <span>Filters</span>
+                        <span class="filter_nav_filters_add_filter">+</span>
+                    </div>
+                    
+                    <%- include('partials/gender')%>
+                    <%- include('partials/species')%>
+            </div>
+
+            <div class="applied_filters">
+                <div class="applied_filters_label applied_filters_label_hidden">Selected Filters</div>
+                <div class="applied_filters_selected_filters">
+                    <%- include('partials/filter')%>
+                </div>
+                <div class="applied_filters_sorting">
+                    <select name="sorting order">
+                        <option value="" disabled selected>Sort By Id</option>
+                        <option value="ascending">Ascending</option>
+                        <option value="descending">Descending</option>
+                    </select>
+                </div>
+            </div>
+            <div class="main_content">
+                <%- include('partials/mainContent')%>
+            </div>
+        </main>
+        <%- include('partials/footer')%>
+        <script src='/assets/bundle.js'></script>
+    </body>
+</html>

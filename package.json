@@ -1,0 +1,30 @@
+{
+  "name": "sapient",
+  "version": "1.0.0",
+  "description": "rick and morty images",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "compile:sass": "node-sass sass/main.scss public/css/main.css -w",
+    "webpack:front": "webpack --config ./webpack-front.config.js",
+    "webpack:back": "webpack --config ./webpack-back.config.js"
+  },
+  "author": "Sumeet Bagewadi",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "node-sass": "^4.13.0",
+    "request": "^2.88.0",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}

@@ -1,0 +1,12 @@
+<div class="filter_nav_gender">
+    <fieldset>
+        <legend>GENDER</legend>
+
+        <% for(var i=0; i < gender.length; i++) { %>
+            <div>
+                <input type="checkbox" name=<%= gender[i].toLowerCase() %> value=<%= gender[i].toLowerCase() %>>
+                <label for=<%= gender[i].toLowerCase() %>><%= gender[i] %></label>
+            </div>
+        <% } %>
+    </fieldset>
+</div>

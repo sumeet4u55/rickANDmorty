@@ -1,0 +1,11 @@
+<div class="filter_nav_species">
+    <fieldset>
+        <legend>SPECIES</legend>
+        <% for(var i=0; i < species.length; i++) { %>
+            <div>
+                <input type="checkbox" name=<%= species[i].toLowerCase() %> value=<%= species[i].toLowerCase() %>>
+                <label for=<%= species[i].toLowerCase() %>><%= species[i] %></label>
+            </div>
+        <% } %>
+    </fieldset>
+</div>

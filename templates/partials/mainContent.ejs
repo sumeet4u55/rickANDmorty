@@ -1,0 +1,32 @@
+
+<% for(var i=0; i < data.length; i++) { %>
+    <div class="main_content_component">
+        <img src=<%= data[i].image %> alt=<%= data[i].name %>>
+        <div class="main_content_component_info">
+            <div class="main_content_component_info_name"><%= data[i].name %></div>
+            <div class="main_content_component_info_id">id <%= data[i].id %> - created <%= data[i].created %> </div>
+        </div>
+        <ul class="main_content_component_details">
+            <li>
+                <span>STATUS</span>
+                <span><%= data[i].status %></span>
+            </li>
+            <li>
+                <span>SPECIES</span>
+                <span><%= data[i].species %></span>
+            </li>
+            <li>
+                <span>GENDER</span>
+                <span><%= data[i].gender %></span>
+            </li>
+            <li>
+                <span>ORIGIN</span>
+                <span><%= data[i].origin.name %></span>
+            </li>
+            <li>
+                <span>LAST LOCATION</span>
+                <span><%= data[i].location.name %></span>
+            </li>
+        </ul>
+    </div>
+    <% } %>

@@ -1,0 +1,10 @@
+<% if (filters) { %>
+    <% for(var i in filters) { %>
+        <% for(let j=0; j < filters[i].length; j++) { %>
+            <div class="applied_filters_selected_filters_content">
+                <span class="filters_text"><%= filters[i][j] %></span>
+                <span class="filters_close">x</span>
+            </div>
+        <% } %>
+    <% } %>
+<% } %>
